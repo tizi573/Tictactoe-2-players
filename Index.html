@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tatetí (Tic‑Tac‑Toe) - Responsive</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" role="application" aria-label="Juego tatetí">
+    <header>
+      <div>
+        <h1>Tatetí</h1>
+        <div class="status" id="status">Turno: <b id="turn">X</b></div>
+      </div>
+      <div class="controls">
+        <div class="scoreboard">X: <b id="scoreX">0</b> — O: <b id="scoreO">0</b></div>
+        <button class="btn" id="undoBtn" title="Deshacer último movimiento">↶</button>
+        <!-- Nuevo control para color de fondo -->
+        <button class="btn" id="colorBtn" title="Cambiar color de fondo">🎨</button>
+        <input type="color" id="colorPicker" style="display:none" aria-label="Selector de color de fondo" />
+      </div>
+    </header>
+
+    <main class="board-wrap">
+      <div class="board" id="board" aria-label="Tablero de tatetí">
+        <!-- 9 cells inserted by JS -->
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="resetRound">Nuevo round</button>
+        <button class="btn primary" id="resetAll">Reiniciar todo</button>
+      </div>
+
+      <div class="hint">Toca una casilla para jugar. Mantén presionado para ver la casilla (accesibilidad táctil).</div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
